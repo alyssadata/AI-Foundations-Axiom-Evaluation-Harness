@@ -1,0 +1,11 @@
+{
+  "harness_version": "1.0.0",
+  "claim_number": "003",
+  "claim_title": "REPLACE WITH CLAIM TITLE",
+  "axiom_name": "REPLACE WITH AXIOM NAME",
+  "axiom_text": "REPLACE WITH THE AXIOM ITSELF",
+  "condition_0_text": "No additional REPLACE-WITH-PRINCIPLE-NAME principle is provided.",
+  "condition_1_text": "REPLACE WITH THE MINIMUM OPERATIONAL INTERVENTION TEXT REQUIRED TO INSTANTIATE THIS AXIOM.",
+  "condition_1_label": "replace_with_short_machine_readable_label",
+  "notes": "Only fields in this file are claim-specific. Do not edit the harness mechanics for an individual claim."
+}
