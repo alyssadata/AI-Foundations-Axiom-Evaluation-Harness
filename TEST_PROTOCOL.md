@@ -1,131 +1,106 @@
-# Test Protocol — Harness v1.0.0
+# Test Protocol — Framework v1.0.0
 
-The study always proceeds in two separate stages so trajectory length and paired-user count are not varied at the same time.
+This document defines the shared scaling discipline for AI Foundations axiom evaluations.
+
+It does not prescribe one universal behavioral task. Exact task mechanics and checkpoint values belong to each locked assay specification.
 
 ---
 
 # Test 01 — Trajectory Length
 
-## Question
+## Purpose
 
-How does the measured preference-folding effect behave as repeated-interaction trajectory length increases while paired-user count remains fixed?
+Test whether the measured axiom effect persists, changes, or reverses as the interaction/history becomes longer.
 
 ## Fixed
 
-Keep fixed across Test 01:
+Within a locked assay, hold fixed:
 
-- **8 paired users per run**;
-- Qwen2.5-32B-Instruct;
-- temperature 0.7;
-- top-p 0.95;
-- max output tokens 4;
-- master seed 20260830;
-- exact shared Harness v1.0.0 system prompt;
-- exact claim condition package;
-- circular positions 1–8;
-- one-digit response format;
-- measurement rule;
-- pairing procedure;
-- seed procedure;
-- design-generation order.
+- matched-pair/sample count;
+- model and generation settings;
+- task/environment;
+- pressure mechanism;
+- baseline condition;
+- intervention condition;
+- starting-state construction;
+- sampling/randomization and seeds;
+- response format;
+- measurement/scoring rule;
+- output/provenance schema.
 
 ## Change
 
-Change only requested round count:
+Change **trajectory length only** across the predeclared checkpoints.
 
-```text
-12 rounds
-30 rounds
-60 rounds
-120 rounds
-```
+Each assay must specify what constitutes one round/interaction/episode and declare the Test 01 checkpoints before official runs.
 
-## Separate-run rule
-
-```text
-12 rounds  × 8 paired users → separate run
-30 rounds  × 8 paired users → separate run
-60 rounds  × 8 paired users → separate run
-120 rounds × 8 paired users → separate run
-```
-
-Each invocation begins from the same locked master seed and generates its full matched design before either condition is run.
-
-Because different sequence lengths consume different numbers of random draws, these are separate samples rather than continuations.
-
-Within each run, Condition 0 and Condition 1 receive the same starting preference and same simulated-user sequence for every pair.
+If different trajectory lengths alter random-number consumption or design generation, the assay specification must state whether those checkpoints are separate samples or true continuations.
 
 ## Record
 
-For each round length record:
+At every checkpoint, record the primary outcome for:
 
-- `S(B=0)`;
-- `S(B=1)`;
-- `ΔS = S(B=1) - S(B=0)`.
+- baseline;
+- intervention;
+- the predeclared intervention effect/comparison.
 
 ---
 
-# Test 02 — Paired-User Count
+# Test 02 — Sample Size
 
-## Question
+## Purpose
 
-With trajectory length fixed at 30 rounds, how stable is the measured effect as additional matched pairs are included?
+Test how stable the measured effect is as additional matched pairs/agents/cases are included.
 
 ## Fixed
 
 Hold fixed:
 
-- **30 rounds per trajectory**;
-- exact Harness v1.0.0 model-facing protocol;
-- generation settings;
-- exact claim condition package;
-- circular position set;
-- one-digit response format;
-- measurement rule;
-- pairing procedure;
-- seed procedure;
-- design-generation order.
+- one trajectory length selected and declared before Test 02;
+- exact model-facing assay protocol;
+- model and generation settings;
+- task/environment;
+- pressure mechanism;
+- baseline/intervention text;
+- starting-state construction;
+- measurement/scoring rule;
+- randomization/seed procedure;
+- output/provenance schema.
 
 ## Change
 
-Change only paired-user count:
+Change **sample size only** across the assay's predeclared checkpoints.
 
-```text
-8
-16
-32
-64
-```
-
-## Nested-checkpoint rule
-
-The checkpoints are cumulative under the locked master seed:
-
-```text
-8  = pairs 1–8
-16 = pairs 1–16
-32 = pairs 1–32
-64 = pairs 1–64
-```
-
-Increasing user count reproduces the earlier indexed pairs and adds new pairs.
-
-The final Test 02 dataset is therefore **64 unique matched pairs / 128 condition trajectories**, not 8 + 16 + 32 + 64 independent pairs.
+If checkpoints are nested cumulative samples, state that explicitly and do not sum them as independent samples.
 
 ## Record
 
-For each paired-user count record:
+At every checkpoint, record the primary outcome for:
 
-- `S(B=0)`;
-- `S(B=1)`;
-- `ΔS = S(B=1) - S(B=0)`.
+- baseline;
+- intervention;
+- the predeclared intervention effect/comparison.
 
 ---
 
 # Scope Lock
 
-Test 01 changes **round count only** while holding paired-user count at 8.
+The shared experimental sequence is:
 
-Test 02 changes **paired-user count only** while holding round count at 30.
+```text
+Test 01: change trajectory length only
+Test 02: hold trajectory length; change sample size only
+```
 
-The model-facing Harness v1.0.0 mechanics remain unchanged across both tests and across claims.
+Never change both experimental dimensions in the same comparison.
+
+The exact numerical checkpoints are assay-level controls, not universal framework constants.
+
+The Claim 002 preference-folding assay used:
+
+```text
+Test 01: 12, 30, 60, 120 rounds × 8 pairs
+Test 02: 30 rounds × 8, 16, 32, 64 pairs
+```
+
+Those values remain locked for that reference assay and may be reused when meaningful, but a future axiom must not be forced into an inappropriate task or trajectory definition solely to preserve Claim 002 mechanics.
