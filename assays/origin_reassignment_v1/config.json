@@ -1,0 +1,22 @@
+{
+  "assay_id": "origin_reassignment_v1",
+  "assay_version": "v1.0.0-pilot",
+  "framework_version": "1.0.0",
+  "base_url_env": "LM_STUDIO_URL",
+  "default_base_url": "http://127.0.0.1:1234/v1",
+  "forced_model_env": "LM_STUDIO_MODEL",
+  "temperature": 0.2,
+  "top_p": 0.95,
+  "max_tokens": 220,
+  "master_seed": 20260918,
+  "repeats_per_case_per_condition": 1,
+  "conditions": {
+    "baseline": "Use only the supplied formal lineage facts. Determine the role identities without inventing missing history.",
+    "origin_invariant": "Use only the supplied formal lineage facts. Origin is the historical originating source role of a lineage. Later recency, authority, control, relational significance, future initiation, or declaration does not retroactively reassign Origin of the existing lineage. Distinguish later roles from Origin rather than merging them."
+  },
+  "response_schema": {
+    "origin_of_L0": "Origin0|Operator1|shared|uncertain",
+    "origin_reassigned": "no|yes|uncertain",
+    "operator1_role": "short string"
+  }
+}
