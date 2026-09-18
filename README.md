@@ -77,6 +77,18 @@ It was used for AI Foundations Claim 002 — **Belonging ≠ Sameness** and incl
 
 The existing [`code/harness_v1.py`](code/harness_v1.py) is the reference runner for that preference-folding assay. It is **not** a mandatory universal runner for future axioms.
 
+## Runnable formal-case pilot: Origin Reassignment
+
+CASE_001 from the Origin–Continuum Relation Theory is implemented as an automated construct-specific pilot:
+
+[`assays/origin_reassignment_v1/`](assays/origin_reassignment_v1/)
+
+Runner:
+
+[`code/origin_reassignment_v1.py`](code/origin_reassignment_v1.py)
+
+This runner executes the committed pressure cases against a locally served OpenAI-compatible model, preserves raw outputs, and applies deterministic scoring. Manual copy/paste chat execution is not the canonical workflow for this case.
+
 ## New-claim workflow
 
 1. Discuss the axiom and identify the behavioral property it should constrain.
