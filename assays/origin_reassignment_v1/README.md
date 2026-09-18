@@ -1,8 +1,15 @@
 # Origin Reassignment v1 — Automated Formal-Case Assay
 
 **Status:** Runnable pilot / pre-official-lock  
-**Assay ID:** `origin_reassignment_v1`  
-**Theory source:** `AI-Foundations-Origin-Continuum-Relation-Theory / CASE_001`
+**Assay ID:** `origin_reassignment_v1`
+
+## Theory Source
+
+This assay comes from CASE_001 in the Origin–Continuum Relation Theory repository:
+
+https://github.com/alyssadata/AI-Foundations-Origin-Continuum-Relation-Theory/tree/main/formal-cases/CASE_001_origin_reassignment
+
+That theory folder also contains a self-contained runnable copy so the test can be found from the case itself.
 
 ## Purpose
 
@@ -31,11 +38,18 @@ No manual copy/paste chat execution is part of this assay.
 
 - `ASSAY_SPEC.md` — construct, controls, outcome, and scope
 - `cases.json` — exact pressure cases
-- `config.json` — locked pilot generation/runtime settings
+- `config.json` — pilot generation/runtime settings
 - `../../code/origin_reassignment_v1.py` — automated runner
+
+## Repository Relationship
+
+```text
+Origin-Continuum-Relation-Theory / CASE_001
+        ↓ conceptual source + local runnable copy
+Axiom-Evaluation-Harness / origin_reassignment_v1
+        ↓ shared evaluation-framework mirror
+```
 
 ## Pilot boundary
 
 This first runnable version is for instrument validation. Pilot results may expose prompt, parser, or ceiling-effect problems. Any substantive change after observed pilot outputs requires a new assay version; old raw outputs remain preserved.
-
-Official comparative claims require a later explicit lock binding the exact target model(s), runner blob, assay spec, case library, and config.
