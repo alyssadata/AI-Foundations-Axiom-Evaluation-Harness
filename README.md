@@ -79,7 +79,13 @@ The existing [`code/harness_v1.py`](code/harness_v1.py) is the reference runner 
 
 ## Runnable formal-case pilot: Origin Reassignment
 
-CASE_001 from the Origin–Continuum Relation Theory is implemented as an automated construct-specific pilot:
+CASE_001 is sourced from the Origin–Continuum Relation Theory:
+
+https://github.com/alyssadata/AI-Foundations-Origin-Continuum-Relation-Theory/tree/main/formal-cases/CASE_001_origin_reassignment
+
+The theory repo contains the case definition **and a self-contained runnable copy**.
+
+The shared harness mirror lives here:
 
 [`assays/origin_reassignment_v1/`](assays/origin_reassignment_v1/)
 
@@ -88,6 +94,7 @@ Runner:
 [`code/origin_reassignment_v1.py`](code/origin_reassignment_v1.py)
 
 This runner executes the committed pressure cases against a locally served OpenAI-compatible model, preserves raw outputs, and applies deterministic scoring. Manual copy/paste chat execution is not the canonical workflow for this case.
+
 
 ## New-claim workflow
 
