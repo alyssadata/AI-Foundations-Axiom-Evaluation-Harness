@@ -1,55 +1,35 @@
-# Origin Reassignment v1 — Automated Formal-Case Assay
+# Origin Reassignment v1 — Completed Pilot
 
-**Status:** Runnable pilot / pre-official-lock  
+**Status:** Completed / preserved historical pilot  
 **Assay ID:** `origin_reassignment_v1`
 
 ## Theory Source
 
-This assay comes from CASE_001 in the Origin–Continuum Relation Theory repository:
+CASE_001 lives here:
 
 https://github.com/alyssadata/AI-Foundations-Origin-Continuum-Relation-Theory/tree/main/formal-cases/CASE_001_origin_reassignment
 
-That theory folder also contains a self-contained runnable copy so the test can be found from the case itself.
+## v1 Result
 
-## Purpose
+The v1 pilot ran on `qwen2.5-32b-instruct` and produced 14/14 PASS across baseline and Origin-invariant conditions.
 
-Automate CASE_001 so the evaluator does not manually open chats, paste prompts, collect responses, or hand-score each run.
+The pilot validated automation and scoring but exposed a ceiling-effect design problem: the model-facing facts explicitly named `Origin0` as the entity that originated L0.
 
-The assay tests one frozen distinction:
+v1 remains preserved as pilot evidence and is not silently rewritten.
 
-> Later recency, authority, relational significance, operational control, future initiation, or declaration must not retroactively rewrite the historical Origin of an established lineage.
+## Superseded Instrument
 
-## Execution
+The active hardened trajectory pilot is v2:
 
-The runner:
+https://github.com/alyssadata/AI-Foundations-Origin-Continuum-Relation-Theory/blob/main/formal-cases/CASE_001_origin_reassignment/RUN_CASE_001.py
 
-1. discovers the model served by the local OpenAI-compatible LM Studio endpoint;
-2. loads the committed case library;
-3. runs every case in a fresh one-turn context;
-4. runs matched baseline and Origin-invariant conditions;
-5. preserves the complete raw model output;
-6. parses the required JSON response;
-7. scores the result deterministically;
-8. writes JSONL, CSV, metadata, and summary files automatically.
+v2 removes answer-bearing Origin0/Operator1 labels, uses opaque entities, swaps source labels across trajectories, and applies accumulated reassignment pressure.
 
-No manual copy/paste chat execution is part of this assay.
+## Historical v1 Files
 
-## Files
+- `ASSAY_SPEC.md`
+- `cases.json`
+- `config.json`
+- `../../code/origin_reassignment_v1.py`
 
-- `ASSAY_SPEC.md` — construct, controls, outcome, and scope
-- `cases.json` — exact pressure cases
-- `config.json` — pilot generation/runtime settings
-- `../../code/origin_reassignment_v1.py` — automated runner
-
-## Repository Relationship
-
-```text
-Origin-Continuum-Relation-Theory / CASE_001
-        ↓ conceptual source + local runnable copy
-Axiom-Evaluation-Harness / origin_reassignment_v1
-        ↓ shared evaluation-framework mirror
-```
-
-## Pilot boundary
-
-This first runnable version is for instrument validation. Pilot results may expose prompt, parser, or ceiling-effect problems. Any substantive change after observed pilot outputs requires a new assay version; old raw outputs remain preserved.
+These remain the historical v1 assay package.
