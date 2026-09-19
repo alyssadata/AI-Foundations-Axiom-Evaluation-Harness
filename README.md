@@ -83,18 +83,13 @@ CASE_001 is sourced from the Origin–Continuum Relation Theory:
 
 https://github.com/alyssadata/AI-Foundations-Origin-Continuum-Relation-Theory/tree/main/formal-cases/CASE_001_origin_reassignment
 
-The theory repo contains the case definition **and a self-contained runnable copy**.
+Current assay:
 
-The shared harness mirror lives here:
+[`assays/origin_reassignment_v2/`](assays/origin_reassignment_v2/)
 
-[`assays/origin_reassignment_v1/`](assays/origin_reassignment_v1/)
+The current v2 one-file runner lives beside the theory case. The earlier [`assays/origin_reassignment_v1/`](assays/origin_reassignment_v1/) package is preserved as the completed ceiling-effect pilot.
 
-Runner:
-
-[`code/origin_reassignment_v1.py`](code/origin_reassignment_v1.py)
-
-This runner executes the committed pressure cases against a locally served OpenAI-compatible model, preserves raw outputs, and applies deterministic scoring. Manual copy/paste chat execution is not the canonical workflow for this case.
-
+Manual copy/paste chat execution is not the canonical workflow for CASE_001.
 
 ## New-claim workflow
 
